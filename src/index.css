@@ -1,0 +1,141 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    --background: 350 100% 98%;
+    --foreground: 340 15% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 340 15% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 340 15% 15%;
+
+    --primary: 340 82% 52%;
+    --primary-foreground: 0 0% 98%;
+
+    --secondary: 340 20% 95%;
+    --secondary-foreground: 340 15% 25%;
+
+    --muted: 340 20% 95%;
+    --muted-foreground: 340 10% 45%;
+
+    --accent: 340 40% 90%;
+    --accent-foreground: 340 15% 25%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 340 30% 88%;
+    --input: 340 30% 88%;
+    --ring: 340 82% 52%;
+
+    --radius: 0.75rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-gradient-to-br from-pink-50 via-rose-50 to-purple-50 text-foreground font-inter;
+    min-height: 100vh;
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-pink-100;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-pink-300 rounded-full;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-pink-400;
+  }
+}
+
+@layer components {
+  .glass-effect {
+    @apply bg-white/20 backdrop-blur-md border border-white/30 shadow-lg;
+  }
+
+  .gradient-text {
+    @apply bg-gradient-to-r from-pink-500 via-rose-500 to-purple-500 bg-clip-text text-transparent;
+  }
+
+  .heart-shadow {
+    filter: drop-shadow(0 4px 8px rgba(236, 72, 153, 0.3));
+  }
+
+  .floating-hearts::before {
+    content: '💖';
+    position: absolute;
+    animation: float 3s ease-in-out infinite;
+    opacity: 0.7;
+    font-size: 1.5rem;
+  }
+
+  .floating-hearts::after {
+    content: '✨';
+    position: absolute;
+    animation: float 3s ease-in-out infinite reverse;
+    animation-delay: 1.5s;
+    opacity: 0.6;
+    font-size: 1.2rem;
+    left: 20px;
+    top: -10px;
+  }
+}
+
+/* Custom animations */
+@keyframes sparkle {
+  0%, 100% { opacity: 0; transform: scale(0) rotate(0deg); }
+  50% { opacity: 1; transform: scale(1) rotate(180deg); }
+}
+
+.sparkle {
+  animation: sparkle 2s ease-in-out infinite;
+}
+
+/* Typewriter effect */
+.typewriter {
+  overflow: hidden;
+  border-right: 0.15em solid #ec4899;
+  white-space: nowrap;
+  margin: 0 auto;
+  animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: #ec4899 }
+}
+
+/* Parallax smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Loading screen */
+.loading-heart {
+  animation: heart-beat 1.5s ease-in-out infinite;
+}
