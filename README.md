@@ -1,43 +1,46 @@
-**Use your preferred IDE**
+# 🎂 Birthday Website
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+A celebratory website built with **React**, **TypeScript**, and **Tailwind CSS** to celebrate a special birthday.  
+Live demo: [iktara.netlify.app](https://iktara.netlify.app/)
 
-Follow these steps:
+---
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+## 🧰 Features
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+- Responsive design for both mobile and desktop  
+- Elegant UI with smooth animations  
+- Interactive sections (e.g. messages, photo gallery, music or sound effects — if you have any)  
+- Clean and maintainable code using TypeScript and React functional components  
+- Tailwind CSS for fast styling and utility-first design  
 
-# Step 3: Install the necessary dependencies.
-npm i
+---
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
+## 🔧 Tech Stack
 
-**Edit a file directly in GitHub**
+| Frontend | Styling | Language |
+|----------|---------|----------|
+| React    | Tailwind CSS | TypeScript |
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+---
 
-**Use GitHub Codespaces**
+## 🗂️ Project Structure
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+- `public/` — static assets (images, fonts, etc.)  
+- `src/` — main source code  
+  - Components — reusable UI parts  
+  - Pages / Views — main screens  
+  - Styles / UI utilities — Tailwind configs, custom styles  
+  - Assets — images, icons, audio (if used)  
+- Config files — TypeScript config, build scripts, etc.
 
-## What technologies are used for this project?
+---
 
-This project is built with:
+## 🚀 Setup & Installation
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+To run this project locally:
+
+```bash
+git clone https://github.com/YOUR_USERNAME/iktara-website.git
+cd iktara-website
+npm install
+npm run dev   # or whatever command starts the development server
